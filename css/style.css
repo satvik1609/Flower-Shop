@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear
+}
+
+html{
+  font-size: 63%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 2rem, 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-sizing:
+}
+header .logo{
+  font-size: 3.4rem;
+  color: black;
+  font-weight: bolder;
+}
+header .logo span{
+  color: #F9004d;
+}
+header .navbar a{
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+header .navbar a:hover{
+  color: #F9004d;
+}
+header .icons a{
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+}
+header .icons a:hover{
+  color: #F9004d;
+}
+header #toggler{
+  display: none;
+  font-size: 3rem;
+}
+header .fa-bars{
+  font-size: 3rem;
+  color: #333;
+  border-radius: .4rem;
+  padding: .5rem, 1.5rem;
+  cursor: pointer;
+  border: .1rem solid black;
+  display: none;
+}
+
+
+/* mdeia start here */
+@media (max-width: 991px) {
+  html{
+    font-size: 55%;
+  }
+  header{
+    padding: 2rem;
+  }
+
+}
+@media (max-width: 768px) {
+  header .fa-bars{
+    display: block;
+
+  }
+  header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: .1rem solid #333;
+    click-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header #toggler:checked ~ .navbar{
+    click-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a{
+    margin:1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: .1rem solid #333;
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  html{
+    font-size: 50%;
+  }
+  header .icons{
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+}
